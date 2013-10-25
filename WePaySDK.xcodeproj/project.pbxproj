@@ -351,9 +351,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				308CFA1118198D3B002C18B7 /* WePay-Example */,
 				30543AF9180DB44C0089B7BB /* WePaySDK */,
 				30E4791C1817961200DB2124 /* WePayTests */,
-				308CFA1118198D3B002C18B7 /* WePay-Example */,
 			);
 		};
 /* End PBXProject section */
