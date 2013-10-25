@@ -78,7 +78,8 @@
 - (void) sendToken: (NSString *) creditCardId
 {
     
-    NSURL * callUrl = [NSURL URLWithString: @"https://example.com"];
+    // Change the callUrl to the server url where you want the token sent
+    NSURL * callUrl = [NSURL URLWithString: @"https://stage.wepay.com"];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL: callUrl];
     
     [request setHTTPMethod: @"POST"];
