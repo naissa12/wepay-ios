@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E7CD1F3A-0250-4051-AC44-9596E625D0B3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WePaySDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01DF6024-7483-462D-9F06-5CB2FD9EBBC0</key>
+		<string>ssh://github.com/nana67/wepay-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WePaySDK.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01DF6024-7483-462D-9F06-5CB2FD9EBBC0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/nana67/wepay-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>01DF6024-7483-462D-9F06-5CB2FD9EBBC0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01DF6024-7483-462D-9F06-5CB2FD9EBBC0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wepaySDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>
