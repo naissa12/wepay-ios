@@ -65,7 +65,6 @@ If you want to use our testing (stage.wepay) environment:
 	addressDescriptor.state = @"CA";
 	addressDescriptor.country = @"US";
 	addressDescriptor.zip = @"94085";
-
 	*/
 
 	// Pass in the customer's name, email, and address descriptor to the user descriptor
