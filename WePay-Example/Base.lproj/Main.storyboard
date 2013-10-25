@@ -94,7 +94,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-v9-qnD">
-                                <rect key="frame" x="80" y="434" width="160" height="30"/>
+                                <rect key="frame" x="52" y="413" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your card details below." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xns-7A-nmM">
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="badge.png" width="160" height="30"/>
+        <image name="badge.png" width="216" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

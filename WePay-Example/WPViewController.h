@@ -18,6 +18,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *securityCode;
 @property (weak, nonatomic) IBOutlet UITextField *zipcode;
 
+/*
+ Send token creditCardId to server.
+ */
+- (void) sendToken: (NSString *) creditCardId;
+
+/*
+  Submits payment form to WePay.
+ */
 - (IBAction)submit:(id)sender;
 
 @end

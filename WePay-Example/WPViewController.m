@@ -145,7 +145,7 @@
         }
     }
     else if(textField.tag == 4)
-    {// restrict length of expiration month field
+    {// restrict length for expiration month field
     
         if (range.location == 2) {
             return NO;

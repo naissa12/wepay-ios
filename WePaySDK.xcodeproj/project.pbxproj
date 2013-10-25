@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30219B99181B2C9F00C996EC /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 30219B97181B2C9F00C996EC /* badge.png */; };
+		30219B9A181B2C9F00C996EC /* badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30219B98181B2C9F00C996EC /* badge@2x.png */; };
 		30543AFE180DB44C0089B7BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30543AFD180DB44C0089B7BB /* UIKit.framework */; };
 		30543B00180DB44C0089B7BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30543AFF180DB44C0089B7BB /* Foundation.framework */; };
 		30543B02180DB44C0089B7BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30543B01180DB44C0089B7BB /* CoreGraphics.framework */; };
@@ -34,7 +36,6 @@
 		308CFA4F18198E4B002C18B7 /* WPError.h in Sources */ = {isa = PBXBuildFile; fileRef = 302886891811E65600278D6C /* WPError.h */; };
 		308CFA5018198E4B002C18B7 /* WPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028868A1811E65600278D6C /* WPError.m */; };
 		308CFA5218198E4B002C18B7 /* WPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 302886DE1814274900278D6C /* WPResource.m */; };
-		308CFA5618199336002C18B7 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 308CFA5518199336002C18B7 /* badge.png */; };
 		308FCD1A181852340073EC9F /* WPCreditCardDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FCD19181852340073EC9F /* WPCreditCardDescriptorTests.m */; };
 		308FCD1D181852470073EC9F /* WPAddressDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FCD1C181852470073EC9F /* WPAddressDescriptorTests.m */; };
 		308FCD20181852530073EC9F /* WPUserDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FCD1F181852530073EC9F /* WPUserDescriptorTests.m */; };
@@ -63,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30219B97181B2C9F00C996EC /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
+		30219B98181B2C9F00C996EC /* badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge@2x.png"; sourceTree = "<group>"; };
 		3028867F1811E65600278D6C /* WPCreditCardDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPCreditCardDescriptor.h; sourceTree = "<group>"; };
 		302886801811E65600278D6C /* WPCreditCardDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPCreditCardDescriptor.m; sourceTree = "<group>"; };
 		302886811811E65600278D6C /* WPDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPDescriptor.h; sourceTree = "<group>"; };
@@ -94,7 +97,6 @@
 		308CFA2618198D3B002C18B7 /* WPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPViewController.m; sourceTree = "<group>"; };
 		308CFA2818198D3B002C18B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		308CFA2F18198D3C002C18B7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		308CFA5518199336002C18B7 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		308FCD18181852340073EC9F /* WPCreditCardDescriptorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPCreditCardDescriptorTests.h; sourceTree = "<group>"; };
 		308FCD19181852340073EC9F /* WPCreditCardDescriptorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPCreditCardDescriptorTests.m; sourceTree = "<group>"; };
 		308FCD1B181852470073EC9F /* WPAddressDescriptorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAddressDescriptorTests.h; sourceTree = "<group>"; };
@@ -222,7 +224,8 @@
 		308CFA1718198D3B002C18B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				308CFA5518199336002C18B7 /* badge.png */,
+				30219B97181B2C9F00C996EC /* badge.png */,
+				30219B98181B2C9F00C996EC /* badge@2x.png */,
 				308CFA1818198D3B002C18B7 /* WePay-Example-Info.plist */,
 				308CFA1918198D3B002C18B7 /* InfoPlist.strings */,
 				308CFA1C18198D3B002C18B7 /* main.m */,
@@ -369,10 +372,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30219B9A181B2C9F00C996EC /* badge@2x.png in Resources */,
 				308CFA2918198D3B002C18B7 /* Images.xcassets in Resources */,
 				308CFA1B18198D3B002C18B7 /* InfoPlist.strings in Resources */,
 				308CFA2418198D3B002C18B7 /* Main.storyboard in Resources */,
-				308CFA5618199336002C18B7 /* badge.png in Resources */,
+				30219B99181B2C9F00C996EC /* badge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
