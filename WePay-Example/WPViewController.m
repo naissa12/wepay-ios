@@ -10,6 +10,9 @@
 #import "WPViewController.h"
 
 @interface WPViewController ()
+{
+    UIActivityIndicatorView * activityView;
+}
 
 @end
 
@@ -69,15 +72,16 @@
     self.expirationYear.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void) sendToken: (NSString *) creditCardId
 {
-    
     // Change the callUrl to the server url where you want the token sent
     NSURL * callUrl = [NSURL URLWithString: @"https://stage.wepay.com"];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL: callUrl];
@@ -96,7 +100,11 @@
                                        queue: queue
                            completionHandler:^(NSURLResponse *response, NSData  *data, NSError * requestError)
      {
-         if(requestError) {
+         
+         [activityView removeFromSuperview];
+         
+         if(requestError)
+         {
              // Handle error
          }
          else
@@ -109,9 +117,9 @@
      }];
 }
 
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
 }
@@ -120,41 +128,52 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if(textField.tag == 3)
-    {
-        if (range.location == 19)
-        {
+    {// Restrict length for credit card number
+        
+        if (range.location == 19) {
             return NO;
         }
+        
         if ([string length] == 0)
+        {
             return YES;
+        }
         
         if ((range.location == 4) || (range.location == 9) || (range.location == 14))
         {
-            
             NSString *str  = [NSString stringWithFormat:@"%@ ",textField.text];
             textField.text = str;
         }
     }
-    else if(textField.tag == 4) {
+    else if(textField.tag == 4)
+    {// restrict length of expiration month field
+    
         if (range.location == 2) {
             return NO;
         }
     }
-    else if(textField.tag == 5) {
+    else if(textField.tag == 5)
+    {// restrict length for expiration year field
+        
         if (range.location == 2) {
             return NO;
         }
     }
-    else if(textField.tag == 6) {
+    else if(textField.tag == 6)
+    {// restrict length for security code field
+
         if (range.location == 4) {
             return NO;
         }
     }
-    else if(textField.tag == 7) {
+    else if(textField.tag == 7)
+    {// restrict length for zipcode field
+
         if (range.location == 5) {
             return NO;
         }
     }
+    
     return YES;
 }
 
@@ -165,6 +184,7 @@
     
     return YES;
 }
+
 
 - (IBAction)submit:(id)sender {
     
@@ -180,23 +200,31 @@
     cardDescriptor.securityCode = self.securityCode.text;
     cardDescriptor.user = userDescriptor;
     
-    // Send the user's card details to WePay and receive token.
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityView.center = self.view.center;
+    [activityView startAnimating];
+    [self.view addSubview:activityView];
+    
+    // Send the user's card details to WePay and receive token
     [WPCreditCard createCardWithDescriptor: cardDescriptor success: ^(WPCreditCard * tokenizedCard) {
         
-        // Card token from WePay.
+        // Card token from WePay
         NSLog(@"Token created with credit_card_id: %@", tokenizedCard.creditCardId);
         
-        // Send token to your servers.
+        // Send token to your servers
         [self sendToken: tokenizedCard.creditCardId];
         
     } failure:^(NSError * error) {
         
+        [activityView removeFromSuperview];
+        
         /*
          Handle errors here.
          */
+
         NSLog(@"Error trying to create token %@", [error localizedDescription]);
         
-        // Show an alert view with the error description.
+        // Show an alert view with error description
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: [error localizedDescription] delegate:self cancelButtonTitle:@"Return" otherButtonTitles:nil];
         [alert show];
         
