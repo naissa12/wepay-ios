@@ -150,7 +150,17 @@
 
 
 -(BOOL)validateZip: (id *)ioValue error:(NSError * __autoreleasing *)outError {
-    return [self handleNoValueCheckForKey: WPErrorInvalidUserZip ioValue: ioValue error: outError];
+    if (*ioValue == nil) {
+        return [self processValidationErrorForKey: WPErrorInvalidUserZip error: outError];
+    }
+
+    NSString * ioValueConverted = (NSString *) *ioValue;
+    
+    if([ioValueConverted length] != 5) {
+        return [self processValidationErrorForKey: WPErrorInvalidUserZip error: outError];
+    }
+    
+    return YES;
 }
 
 

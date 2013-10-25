@@ -103,8 +103,7 @@
          
          [activityView removeFromSuperview];
          
-         if(requestError)
-         {
+         if(requestError) {
              // Handle error
          }
          else
@@ -200,10 +199,10 @@
     cardDescriptor.securityCode = self.securityCode.text;
     cardDescriptor.user = userDescriptor;
     
-    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleGray];
     activityView.center = self.view.center;
     [activityView startAnimating];
-    [self.view addSubview:activityView];
+    [self.view addSubview: activityView];
     
     // Send the user's card details to WePay and receive token
     [WPCreditCard createCardWithDescriptor: cardDescriptor success: ^(WPCreditCard * tokenizedCard) {
