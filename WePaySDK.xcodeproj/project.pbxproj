@@ -33,7 +33,6 @@
 		308CFA4E18198E4B002C18B7 /* WPCreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 302886881811E65600278D6C /* WPCreditCard.m */; };
 		308CFA4F18198E4B002C18B7 /* WPError.h in Sources */ = {isa = PBXBuildFile; fileRef = 302886891811E65600278D6C /* WPError.h */; };
 		308CFA5018198E4B002C18B7 /* WPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028868A1811E65600278D6C /* WPError.m */; };
-		308CFA5118198E4B002C18B7 /* WPResource.h in Sources */ = {isa = PBXBuildFile; fileRef = 302886DD1814274900278D6C /* WPResource.h */; };
 		308CFA5218198E4B002C18B7 /* WPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 302886DE1814274900278D6C /* WPResource.m */; };
 		308CFA5618199336002C18B7 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 308CFA5518199336002C18B7 /* badge.png */; };
 		308FCD1A181852340073EC9F /* WPCreditCardDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FCD19181852340073EC9F /* WPCreditCardDescriptorTests.m */; };
@@ -53,7 +52,6 @@
 		308FCD2C18185D280073EC9F /* WPCreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 302886881811E65600278D6C /* WPCreditCard.m */; };
 		308FCD2D18185D280073EC9F /* WPError.h in Sources */ = {isa = PBXBuildFile; fileRef = 302886891811E65600278D6C /* WPError.h */; };
 		308FCD2E18185D280073EC9F /* WPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028868A1811E65600278D6C /* WPError.m */; };
-		308FCD2F18185D280073EC9F /* WPResource.h in Sources */ = {isa = PBXBuildFile; fileRef = 302886DD1814274900278D6C /* WPResource.h */; };
 		308FCD3018185D280073EC9F /* WPResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 302886DE1814274900278D6C /* WPResource.m */; };
 		3091E10C1814B9A0002856DB /* WePay.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3091E10A1814B9A0002856DB /* WePay.strings */; };
 		30E4791E1817961200DB2124 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30543B21180DB44C0089B7BB /* SenTestingKit.framework */; };
@@ -78,7 +76,6 @@
 		302886911813397400278D6C /* WPAddressDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPAddressDescriptor.h; sourceTree = "<group>"; };
 		302886921813397400278D6C /* WPAddressDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPAddressDescriptor.m; sourceTree = "<group>"; };
 		30288694181356DE00278D6C /* WPDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPDescriptor.m; sourceTree = "<group>"; };
-		302886DD1814274900278D6C /* WPResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPResource.h; sourceTree = "<group>"; };
 		302886DE1814274900278D6C /* WPResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPResource.m; sourceTree = "<group>"; };
 		30543AFD180DB44C0089B7BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		30543AFF180DB44C0089B7BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +102,7 @@
 		308FCD1F181852530073EC9F /* WPUserDescriptorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPUserDescriptorTests.m; sourceTree = "<group>"; };
 		3091E1071814B46F002856DB /* WePaySDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WePaySDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3091E10B1814B9A0002856DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WePay.strings; sourceTree = "<group>"; };
+		30991789181B09F600192B11 /* WPResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPResource.h; sourceTree = "<group>"; };
 		30E4791D1817961200DB2124 /* WePayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WePayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E479231817961200DB2124 /* WePayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WePayTests-Info.plist"; sourceTree = "<group>"; };
 		30E479251817961200DB2124 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -158,7 +156,7 @@
 				302886881811E65600278D6C /* WPCreditCard.m */,
 				302886891811E65600278D6C /* WPError.h */,
 				3028868A1811E65600278D6C /* WPError.m */,
-				302886DD1814274900278D6C /* WPResource.h */,
+				30991789181B09F600192B11 /* WPResource.h */,
 				302886DE1814274900278D6C /* WPResource.m */,
 			);
 			path = WePay;
@@ -426,7 +424,6 @@
 				308CFA4E18198E4B002C18B7 /* WPCreditCard.m in Sources */,
 				308CFA4F18198E4B002C18B7 /* WPError.h in Sources */,
 				308CFA5018198E4B002C18B7 /* WPError.m in Sources */,
-				308CFA5118198E4B002C18B7 /* WPResource.h in Sources */,
 				308CFA5218198E4B002C18B7 /* WPResource.m in Sources */,
 				308CFA1D18198D3B002C18B7 /* main.m in Sources */,
 				308CFA2118198D3B002C18B7 /* WPAppDelegate.m in Sources */,
@@ -452,7 +449,6 @@
 				308FCD2C18185D280073EC9F /* WPCreditCard.m in Sources */,
 				308FCD2D18185D280073EC9F /* WPError.h in Sources */,
 				308FCD2E18185D280073EC9F /* WPError.m in Sources */,
-				308FCD2F18185D280073EC9F /* WPResource.h in Sources */,
 				308FCD3018185D280073EC9F /* WPResource.m in Sources */,
 				30E479291817961200DB2124 /* WPCreditCardTests.m in Sources */,
 				308FCD1A181852340073EC9F /* WPCreditCardDescriptorTests.m in Sources */,
@@ -692,6 +688,7 @@
 				308CFA3F18198D3C002C18B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30E4792B1817961200DB2124 /* Build configuration list for PBXNativeTarget "WePayTests" */ = {
 			isa = XCConfigurationList;

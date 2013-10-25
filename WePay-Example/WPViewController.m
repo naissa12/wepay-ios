@@ -75,7 +75,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) sendToken: (NSString *) creditCardId {
+- (void) sendToken: (NSString *) creditCardId
+{
     
     NSURL * callUrl = [NSURL URLWithString: @"https://example.com"];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL: callUrl];
@@ -107,7 +108,8 @@
      }];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
@@ -181,16 +183,17 @@
     [WPCreditCard createCardWithDescriptor: cardDescriptor success: ^(WPCreditCard * tokenizedCard) {
         
         // Card token from WePay.
-        NSLog(@"Token: %@", tokenizedCard.creditCardId);
+        NSLog(@"Token created with credit_card_id: %@", tokenizedCard.creditCardId);
         
         // Send token to your servers.
         [self sendToken: tokenizedCard.creditCardId];
         
     } failure:^(NSError * error) {
         
-        // Handle errors
-        
-        NSLog(@"%@", error);
+        /*
+         Handle errors here.
+         */
+        NSLog(@"Error trying to create token %@", [error localizedDescription]);
         
         // Show an alert view with the error description.
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: [error localizedDescription] delegate:self cancelButtonTitle:@"Return" otherButtonTitles:nil];
@@ -198,4 +201,5 @@
         
     }];
 }
+
 @end

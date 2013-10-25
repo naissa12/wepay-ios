@@ -12,37 +12,38 @@
  */
 FOUNDATION_EXPORT NSString *const WPAPPErrorDomain;
 
-/* 
- Category for NSError 
- (corresponds to WePay API "error" paramater)
- Possible Values:
- - invalid_reques
+/*
+ The category an NSError is for. Corresponds to the "error" property 
+ returned in errors from the WePay API. 
+ 
+ Possible Values - WePay API:
+ - invalid_request
  - access_denied
  - invalid_scope
  - invalid_client
  - processing_error
- */
+ 
+ Possible values - Client-side Validation:
+ - WPErrorCategoryCardValidation (validation error in the card descriptor class)
+ - WPErrorCategoryUserValidation (validation error in the user descriptor class)
+ - WPErrorCategoryAddressValidation (validation error in the address descriptor class)
+
+*/
+
 FOUNDATION_EXPORT NSString *const WPErrorCategoryKey;
 
-/*
- Category for NSError used when there is no "error" parameter 
- returned by WePay API. For example, when no data is returned. Grave error.
- */
 FOUNDATION_EXPORT NSString *const WPErrorCategoryNone;
 
 /*
- Validation categories corresponding to respective descriptor classes.
+ These values may be returned for WPErrorCategoryKey from the call to createCardWithDescriptor or from validation function calls.
  */
 FOUNDATION_EXPORT NSString *const WPErrorCategoryValidation;
 FOUNDATION_EXPORT NSString *const WPErrorCategoryCardValidation;
 FOUNDATION_EXPORT NSString *const WPErrorCategoryUserValidation;
-
 FOUNDATION_EXPORT NSString *const WPErrorCategoryAddressValidation;
 
 /*
- SDK Validation NSError codes resulting from invalid input to descriptor classes.
- For example, WPErrorInvalidCard is used as error code in the NSError object when invalid card 
- is passed into carddescriptor class.
+ Validation functions return NSError objects with these codes
  */
 typedef NS_ENUM(NSInteger, WPErrorCode) {
     WPErrorUnknown = -10000,
@@ -63,7 +64,7 @@ typedef NS_ENUM(NSInteger, WPErrorCode) {
 };
 
 /*
- Error messages set for NSError NSLocalizedDescriptionKey.
+ Maps to NSLocalizedDescriptionKey
  */
 #define WPUnexpectedErrorMessage NSLocalizedStringFromTable(@"There was an unexpected error.", @"WePay", @"There was an unexpected error.");
 #define WPNoDataReturnedErrorMessage NSLocalizedStringFromTable(@"There was no data returned.", @"WePay",  @"There was no data returned.");
@@ -71,7 +72,7 @@ typedef NS_ENUM(NSInteger, WPErrorCode) {
 
 @interface WPError : NSObject
 
-// Maps a validation error code to an error description.
+// Maps a validation error code to an error description
 + (NSString *) validationErrorDescriptionForCode: (WPErrorCode) code;
 
 @end

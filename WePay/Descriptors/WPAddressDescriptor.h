@@ -9,7 +9,7 @@
 #import "WPDescriptor.h"
 
 /*
- WPAddressDescriptor is a descriptor class used to pass in and validate user address information.
+ WPAddressDescriptor is a descriptor class used to pass in and validate user address.
 */
 @interface WPAddressDescriptor : WPDescriptor 
 

@@ -48,7 +48,7 @@
 - (BOOL) handleNoValueCheckForKey: (WPErrorCode) code ioValue: (id *) ioValue error: (NSError * __autoreleasing *)outError;
 
 /*
- The validation functions in each descriptor class call this method to actually set an NSError object. For example, if their is an invalid card number, the validateNumber function in WPCreditCardDescriptor class calls this method to populate the outError parameter with a NSError object.
+ The validation functions in each descriptor class call this method to actually set an NSError object. For example, if there is an invalid card number, the validateNumber function in the WPCreditCardDescriptor class calls this method to populate the outError parameter with an NSError object.
  */
 - (BOOL) processValidationErrorForKey: (WPErrorCode) code error: (NSError * __autoreleasing *)outError;
 

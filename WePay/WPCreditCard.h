@@ -28,7 +28,12 @@ typedef void (^WPCreditCardErrorBlock) (NSError * error);
 - (id) initWithCreditCardId: (NSString *) aCreditCardId;
 
 /*
- Handles card tokenization, success, and error handling resulting from tokenizing card.
+ Makes /credit_card/create API call. Sends credit card details to WePay. Receives back token.
+ 
+ @param descriptor Card descriptor with the customer's card details
+ @param success Success callback function to call if gets back valid response
+ @param failure Error callback function to call if there is an error
+ 
  */
 + (void) createCardWithDescriptor: (WPCreditCardDescriptor *) descriptor success: (WPCreditCardSuccessBlock) successHandler failure: (WPCreditCardErrorBlock) errorHandler;
 

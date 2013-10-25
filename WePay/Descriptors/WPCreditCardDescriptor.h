@@ -9,7 +9,7 @@
 #import "WPUserDescriptor.h"
 
 /*
- You should create this object and populate its properties with the customer's credit card details. Then to create a token, you pass in this object to the createCardWithDescriptor static method in the WPCreditCard class.
+ You should create this object and populate its properties with the customer's credit card details. Then to create a token, you pass in this object to createCardWithDescriptor.
  */
 @interface WPCreditCardDescriptor : WPDescriptor 
 
@@ -29,8 +29,7 @@
 @property (nonatomic, strong) WPUserDescriptor * user;
 
 /*
- Initialize descriptor with user input.
- You should use this function to initialize this class with the user credit card details.
+ You should use this function to initialize this class with the user's credit card details.
  */
 - (id) initWithNumber: (NSString *) creditCardNumber securityCode: (NSString *) cvv expMonth: (NSInteger) expMonth expYear: (NSInteger) expYear user: (WPUserDescriptor *) userDescriptor;
 

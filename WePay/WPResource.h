@@ -13,8 +13,7 @@ typedef void (^WPSuccessBlock)(NSDictionary * data);
 typedef void (^WPErrorBlock)(NSError * error);
 
 /*
- Class that all other API call classes like WPCreditCard extend from.
- Makes actual API request call to WePay.
+ This class is the parent class for all of the API call classes (i.e WPCreditCard class).
  */
 @interface WPResource : NSObject
 
@@ -24,15 +23,11 @@ typedef void (^WPErrorBlock)(NSError * error);
 + (NSString *) apiRootUrl;
 
 /*
- Make API request to endpoint.
- Call successhandler with data returned in NSDictionary format.
- Call error handler with NSError returned.
+ You call this method to make the actual /credit_card/create API call.
  */
 + (void) makeRequestToEndPoint:(NSString *) endpoint values:(NSDictionary *) params accessToken: (NSString *) accessToken successBlock: (WPSuccessBlock) successHandler errorHandler: (WPErrorBlock) errorHandler;
 
-/*
- Process Response from makeRequestToEndpoint.
- */
+// Helper for makeRequestToEndPoint to process API call request response
 + (void) processResponse: (NSURLResponse *) response data: (NSData *) data error: (NSError *)error successBlock: (WPSuccessBlock) successHandler errorHandler: (WPErrorBlock) errorHandler;
 
 @end
