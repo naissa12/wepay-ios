@@ -133,7 +133,7 @@ The SDK validates all user input before sending to WePay. Each descriptor class 
 
 These methods follow the validation method convention used by [key value validation](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/KeyValueCoding/Articles/Validation.html "Key Value Validation"). You can call the validation methods directly, or by invoking validateKey:forKey:error: and specifying the key. 
 
-#### (Advanced) Differentiating between Errors
+#### (Advanced) How to differentiate between errors
 
 You can check the error domain to differentiate between **NSURLDomain** and **WPAPPDomain** errors (WePay API and Client-side validation errors).
 
