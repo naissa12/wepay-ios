@@ -1,5 +1,5 @@
 ![alt text](https://static.wepay.com/img/logos/wepay.png "WePay")
-
+===========================================================
 WePay's IOS SDK makes it easy for you to add payments to your mobile application. You don't have to worry about PCI compliance because your servers never touch actual credit card data. User card details are sent to WePay, which sends back a token that your app can send off to your own servers for charge. 
 
 ### Requirements
