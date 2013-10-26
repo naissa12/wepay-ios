@@ -32,6 +32,7 @@
     return self;
 }
 
+
 - (id) initWithZip: (NSString *) zipCode {
     self = [super init];
     
